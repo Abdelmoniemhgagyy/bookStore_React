@@ -1,0 +1,115 @@
+.login-container {
+    margin: 60px auto;
+    width: 80%;
+    text-align: center;
+}
+.login-container h2 {
+    align-self: center;
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+.login-wrapper{
+    margin: 10px auto;
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: 0 0 20px 0 var(--primary-color);
+}
+.login-items{
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    border-radius:3%;
+   
+}
+.login-left{
+    height: 100%;
+    background:url("./login.jpg") center no-repeat ;
+    background-size:cover;
+}
+
+.login-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    margin: 10px;
+    position: relative;
+
+}
+.login-wrapper form  input,
+.login-wrapper button,
+.login-wrapper .no-account{
+    width: 100%;
+    padding:10px;
+    margin:10px 0 5px 0;
+    justify-self: flex-start;
+    align-self: start;
+    
+}
+
+.login-wrapper form  input{
+    border-radius: 5px;
+    transition: .3s;
+    font-size: 16px;
+    border: none    
+}
+.login-wrapper form  input:focus{
+        border:  1px solid blueviolet;
+}
+.login-wrapper form > input:hover{
+    background-color: #77777725;
+}
+.login-items button{
+    text-align: center;
+    margin: 10px auto;
+    cursor: pointer;
+    width: 30%;
+    background-color: blueviolet
+}
+.no-account{
+    font-size:14px;
+}
+.no-account a {
+    font-weight: 700;
+    margin-left: 5px;
+    color: blueviolet;
+}
+/* ------showPassword-------- */
+.show-and-hide-pass{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.showpassword{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+   
+
+}
+/* ------------------------------- */
+@media(max-width:358px){
+
+    .showpassword{
+        top:85px;
+    }
+
+}
+
+@media(max-width:720px){
+    .login-container {
+        margin: 40px auto;
+    }
+    .login-wrapper{
+        width: 90%;
+        grid-template-columns:1fr
+    }
+    .login-left{
+        height: 200px;
+    }
+}
+

@@ -1,0 +1,29 @@
+.services{
+    margin: 40px 30px 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   flex-wrap:wrap;
+   text-align: center;
+}
+
+
+.service-item{
+    border-radius: 20px;
+    border:1px solid var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    min-width: 200px;
+    transition: 0.3s;
+    cursor:pointer;
+    margin: 10px 40px;
+}
+.service-item:hover {
+    color:var(--main-color);
+    background-color:var(--primary-color)
+}
+.service-item i {
+    display: block;
+    font-size: 24px;
+    
+}

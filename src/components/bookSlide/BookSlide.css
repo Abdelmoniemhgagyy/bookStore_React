@@ -1,0 +1,128 @@
+.book-slide-container{
+    position: relative;
+    max-width:100vw;
+    overflow: hidden;
+}
+
+.book-slide-wrapper{
+    width:100%;
+    display: flex;
+    margin: 10px;
+    transition: .6s ;
+}
+.book-slide-title{
+    margin: 10px 15px;
+    padding: 10px;
+    font-size: 32px; 
+    letter-spacing: 2px;
+    width: 300px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    white-space: nowrap
+}
+@media (max-width:560px){
+    .book-slide-title{
+        width: 200px;
+        font-size: 18px;  
+    }
+}
+
+.bi-chevron-left,
+.bi-chevron-right{
+    transition: .1s;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:50% ;
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    z-index: 2;
+}
+.bi-chevron-left{
+    left: 14px;
+}
+.bi-chevron-right{
+    right:10px
+}
+.bi-chevron-left:hover,
+.bi-chevron-right:hover{
+    background-color: #29b0e6;
+    
+}
+.book-slide-item{
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    margin: 8px ;
+}
+
+.book-slide-img{
+    height: 300px;
+    width: 200px;
+    margin: 5px;
+   cursor: pointer;
+}
+.book-slide-item-title,
+.book-slide-content{
+    text-align: center;
+}
+.book-slide-item-title{
+    font-size: 16px;
+    margin-bottom:15px;
+    height: 40px;
+}
+.book-slide-item-rating{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    color: orange;
+  
+}
+.book-slide-item-rating span {
+    margin-left: 20px;
+    color: #990000;
+   
+
+}
+
+.book-slide-item-price{
+        transition: 0.2s;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding: 5px;
+        text-align: center;
+        color:var(--primary-color);
+        border:1px solid var(--primary-color);
+        border-radius: 40px;
+        cursor: pointer;
+}
+.book-slide-item-price:hover{
+    background-color: var(--primary-color);
+    color:#fff;
+}
+
+.book-slide-item-icons .bi-cart-plus{
+ margin-left: 5px;
+ 
+}
+.book-slide-item-icons .bi-cart-plus,
+.book-slide-item-icons .bi-eye-fill{
+    cursor: pointer;
+    transition: .2s;
+
+
+}
+.book-slide-item-icons .bi-cart-plus:hover,
+.book-slide-item-icons .bi-eye-fill:hover{
+display: inline-block;
+   color: var(--primary-color);
+   transform: scale(1.3);
+  
+}

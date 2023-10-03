@@ -1,0 +1,38 @@
+.authors-container{
+    width: 80%;
+    margin: 60px auto;
+}
+.authors-search{
+    width: 100%;
+}
+
+.authors-search input {
+    width: 100%;
+    border-radius: 30px;
+    padding: 5px 10px;
+    border:1px solid var(--primary-color);
+    outline: none;
+}
+.authors-search input:focus{
+    border-color:blueviolet ;
+}
+.authors-items {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.authors-item{
+    margin: 5px;
+}
+.content-item {
+    border: 1px solid var(--primary-color);
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+.authors-item img {
+    width: 250px;
+    height: 200px;
+   border-radius: 20px;
+}
