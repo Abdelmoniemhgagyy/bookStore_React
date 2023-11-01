@@ -13,7 +13,7 @@ function BookSlide({data}) {
         if(dir==="left"){
             setSlideIndex(slideIndex >=1 ? slideIndex - 1 :6)
         }else{
-            setSlideIndex( slideIndex <=5 ? slideIndex + 1 : 0) 
+            setSlideIndex( slideIndex <=6 ? slideIndex + 1 : 0) 
         }
     }
 
@@ -22,10 +22,11 @@ function BookSlide({data}) {
         setBookData(book); 
     }
     const {Add_item}=useContext(CartContext)
+    const screenWidth = window.innerWidth;
     return (
     <div className='book-slide-container'>
         <i className="bi bi-chevron-left" onClick={()=>handleIndex("left")}></i>
-        <div className="book-slide-wrapper" style={{transform:`translateX(${slideIndex * -200}px)`}}>
+        <div className="book-slide-wrapper" style={{transform:`translateX(${screenWidth > 1200 ? slideIndex * -180 : screenWidth > 768? slideIndex * -250  : slideIndex * -300}px)`}}>
         {data.map( item => 
             <div key={item.id} className='book-slide-item'>
                 <img src={`/books/${item.image}`} alt={item.title} className="book-slide-img" onClick={() => handelModel(item)} />

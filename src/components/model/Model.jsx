@@ -28,8 +28,10 @@ function Model({setOpenModel,bookData,openModel}) {
                <div className="rating">
                <Rating rating={bookData.rating} reviews={bookData.reviews} /> </div>
                <div className="model-book-cart">
-               <input type="number" 
-                value={quan}
+               <input type="number"
+                min={0}
+                max={100}
+                value={quan }
                 onChange={(e)=> setQuan(e.target.value)}/>
                 <button onClick={()=>Add_item({...bookData,quantity:quan})}> <i class="bi bi-cart4" ></i> Add To cart</button>
                </div>

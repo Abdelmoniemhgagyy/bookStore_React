@@ -13,7 +13,7 @@
 .contact-top {
     text-align: center;
     display: grid;
-    grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(400px,1fr));
     width: 100%;
     border-bottom: 1px solid var(--primary-color);
     padding-bottom: 10px;
@@ -76,4 +76,20 @@ form button {
     color: #fff;
     border: none;
     width: 80px;
+    cursor: pointer;
+}
+form button:disabled{
+    opacity: .4;
+    cursor: not-allowed;
+}
+.animation-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.succeeded_message{
+    margin-top: 6px;
+    color: var(--primary-color);
+    font-weight: 500;
+    height: 27px;
 }

@@ -17,6 +17,7 @@
     transition: 0.3s;
     cursor:pointer;
     margin: 10px 40px;
+    color: black;
 }
 .service-item:hover {
     color:var(--main-color);

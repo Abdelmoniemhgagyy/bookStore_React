@@ -22,6 +22,8 @@ function Book() {
             <Rating rating={book.rating} reviews={book.reviews}/>
             <div className="model-book-cart">
                 <input type="number" 
+                min={0}
+                max={100}
                 value={quan}
                 onChange={(e)=> setQuan(e.target.value)}/>
                 <button onClick={()=>Add_item({...book,quantity:quan})}> <i class="bi bi-cart4"></i> Add To cart</button>

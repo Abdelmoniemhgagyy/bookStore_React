@@ -4,7 +4,6 @@ import OrderSummary from "./OrderSummary"
 import CartItem from "./CartItem"
 import CartContext from "../../context/cartContext"
 import { useContext } from 'react'
-import { useState } from 'react'
 function Cart() {
 
   const {cartItems,Remove_item,Add_item} = useContext(CartContext)

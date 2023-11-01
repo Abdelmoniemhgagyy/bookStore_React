@@ -1,9 +1,6 @@
 import React from 'react'
-import { useContext} from 'react';
-import CartContext from "../../context/cartContext"
-function CartItem({item,Add_item,Remove_item}) {
 
-     
+function CartItem({item,Add_item,Remove_item}) {
     const {image,title,author,quantity,price,id}=item;
   return (
     <div className="cart-item"> 
@@ -13,7 +10,7 @@ function CartItem({item,Add_item,Remove_item}) {
             <b>Title : </b>{title}<br/>
             <b>Authors : </b>{author}
             <div className="cart-counter">
-                   <button onClick={()=> Add_item({...item,quantity:item.quantity + 1})}>
+                   <button onClick={()=> Add_item({...item,quantity:item.quantity + 1})} disabled={item.quantity>=100}>
                    <i class="bi bi-plus"></i>
                    </button>
                     <span>{quantity}</span>

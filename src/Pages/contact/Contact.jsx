@@ -1,6 +1,11 @@
 import React from 'react'
 import "./contact.css"
+import Animation from "./animation_lo14clnl.json"
+import { useForm, ValidationError } from '@formspree/react';
+import Lottie from "lottie-react"
 function Contact() {
+  const [state, handleSubmit] = useForm("xaygvnrz");
+
   return (
     <div className='contact-container'>
       <div className="contact-wrapper">
@@ -25,14 +30,35 @@ function Contact() {
         </div>
         <div className="contact-bottom">
             <h3>Contact Us From</h3>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <div className="contact-form-top">
-                <input type="text" placeholder='Name' />
-                <input type="text" placeholder='Subject' />
-                <input type="text" placeholder='Email' />
+                <input type="text" placeholder='Name' name='name' />
+                <ValidationError 
+                    prefix="Name" 
+                    field="name"
+                    errors={state.errors}
+                  />
+                <input type="text" placeholder='Subject' name="subject"/>
+                <ValidationError 
+                    prefix="Subject" 
+                    field="subject"
+                    errors={state.errors}
+                  />
+                <input type="email" placeholder='Email' name='email'/>
+                <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
+                  />
               </div>
-              <textarea placeholder='Your Massage'></textarea>
-              <button>Send</button>
+              <textarea placeholder='Your Massage'  name="message"></textarea>
+              <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                />
+              <button type="submit" disabled={state.succeeded}>Send</button>
+              {state.succeeded &&<div className='animation-div'><Lottie animationData={Animation} style={{height:40}} loop={2} ></Lottie> <span className='succeeded_message'>succeeded Message</span></div> }
             </form>
         </div>
       </div>

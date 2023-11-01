@@ -14,7 +14,7 @@ function Authors() {
             onChange={(e)=> setState(e.target.value)} />
         </div>
         <div className="authors-items">
-          {authors.filter((e)=> e.name.toLowerCase().includes(state))
+          {authors.filter((e)=> e.name.toLowerCase().includes(state.toLowerCase()))
           .map((item)=> 
           <div className="authors-item" key={item.id}>
             <div className="content-item">
